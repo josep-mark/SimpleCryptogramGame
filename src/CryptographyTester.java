@@ -27,6 +27,10 @@ public class CryptographyTester {
 		String keyEncoded = key.encode();
 		System.out.println(cypher);
 		System.out.println(keyEncoded);
+		
+		RandomCypher rand = new RandomCypher(quote);
+		ArrayList<Character> randCypher = rand.getCypher();
+		System.out.println(randCypher);
 	}
 
 }
