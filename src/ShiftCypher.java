@@ -16,13 +16,11 @@ public class ShiftCypher {
 	}
 	
 	public String encrypt(){
-		String encrypted = "";
 		char[] str = contents.toCharArray();
 		String str2 = "";
 		
 		for (int i = 0; i < str.length; i ++){
 			char c = str[i];
-			int l = (int) c;
 			
 			if (c > 64 && c < 91){
 				int y = (c + shift - (int)'A') % 26 + (int)'A';

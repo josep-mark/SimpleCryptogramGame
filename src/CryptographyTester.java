@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 /**
  * Tester for thhe cryptography classes
  * @author Joseph
@@ -18,6 +20,13 @@ public class CryptographyTester {
 		ReverseCypher reverse = new ReverseCypher(quote);
 		String encoded = reverse.getCypher();
 		System.out.println(encoded);
+		
+		String keyWord = "zebra";
+		KeyWordCypher key = new KeyWordCypher(quote, keyWord);
+		ArrayList<Character> cypher = key.getCypher();
+		String keyEncoded = key.encode();
+		System.out.println(cypher);
+		System.out.println(keyEncoded);
 	}
 
 }
