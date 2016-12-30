@@ -17,7 +17,7 @@ public class ReverseCypher {
 			c --;
 		}
 		
-		System.out.println(cypher);
+//		System.out.println(cypher);
 		
 		for(int i = 0; i < message.length(); i++){
 			char x = message.charAt(i);

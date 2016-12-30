@@ -28,7 +28,7 @@ public class RandomCypher {
 			c++;
 		}
 		
-		System.out.println(letters);
+//		System.out.println(letters);
 		
 		while (count < 26){
 			int index = rand.nextInt(letters.size());
@@ -37,6 +37,25 @@ public class RandomCypher {
 			count++;
 		}
 		
+	}
+	
+	public String encode(){
+		String str = "";
+		message = message.toLowerCase();
+			
+		for (int i = 0; i < message.length(); i++){
+			char c = message.charAt(i);
+			if(c > 96 && c < 123){
+				int x = c - 'a';
+				char y = characters.get(x);
+				str += y;
+			}
+			else{
+				str += c;
+			}
+			
+		}
+		return str;
 	}
 	
 	public ArrayList<Character> getCypher(){
